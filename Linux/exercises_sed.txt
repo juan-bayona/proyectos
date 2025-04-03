@@ -1,0 +1,23 @@
+Exercises for screenshot "final sed exercises"
+
+1- sed -e 's/[[:upper:]]//g' datos_empleados.csv
+
+2- sed -E 's/([[:alnum:]])\1+/\1/g' datos_empleados.csv | grep Beach
+*Understood how \1+ and \1,\2,etc. works by doing this below:
+echo "hola mundo" | sed 's/\(hola\) \(mundo\)/\2,\1/'
+> mundo,hola
+ *Now I know that for ERE, we need to use -E in sed and that to capture data, we use \(\), then to display the desired 
+ group is with \1...
+
+3- sed 1,5d datos_empleados.csv
+
+4-cat -n datos_empleados.csv | sed -e '1,19d' -e '31,$d' 
+
+5-sed -e 's/[[:alnum:]]/ /' datos_empleados.csv | head -n3 (replaced first word with space)
+
+6-sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv
+
+Had to replace "," for ";" as needed for last exercise.
+sed -Ei 's/\,/\;/g' datos_empleados.csv
+
+7-sed -E 's/\;/\t/g' datos_empleados.csv
