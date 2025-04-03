@@ -1,0 +1,85 @@
+453  sed 's/[[:alnum:]]/' datos_empleados.csv 
+  454  sed 's/[[:alnum:]]/""' datos_empleados.csv 
+  455  sed 's/[[:alnum:]]/""/' datos_empleados.csv 
+  456  sed 's/[[:alnum:]]/""d/' datos_empleados.csv 
+  457  sed 's/[[:alnum:]]/d/' datos_empleados.csv 
+  458  sed 's/[[:alnum:]]/d/' datos_empleados.csv | grep burt
+  459  sed 's/[[:alnum:]]/d/' datos_empleados.csv | grep -i burt
+  460  sed 's/[[:alnum:]]/d/' datos_empleados.csv | grep Burt
+  461  cat datos_empleados.csv | grep Burt
+  462  sed 's/[[:alnum:]]//' datos_empleados.csv | grep Burt
+  463  sed --help
+  464  man sed
+  465  sed -e 's/[[:alnum:]]//' datos_empleados.csv | grep Burt
+  466  sed -e 's/[[:alnum:]]/d' datos_empleados.csv | grep Burt
+  467  sed -e '/[[:alnum:]]/d' datos_empleados.csv | grep Burt
+  468  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  469  sed -e '/[[:alnum:]]/g' datos_empleados.csv
+  470  sed -e '/[[:alnum:]]/r' datos_empleados.csv
+  471  sed -e '/[[:alnum:]]/u' datos_empleados.csv
+  472  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  473  sed -e '/[[:alnum:]]/' datos_empleados.csv
+  474  sed -e '/[[:alnum:]]/p' datos_empleados.csv
+  475  sed -ne '/[[:alnum:]]/p' datos_empleados.csv
+  476  sed -e '/[[:alnum:]]/!p' datos_empleados.csv
+  477  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  478  sed -e '/[[:alnum:]]/dp' datos_empleados.csv
+  479  sed -e 'p/[[:alnum:]]/d' datos_empleados.csv
+  480  sed -e 's/[[:alnum:]]/d' datos_empleados.csv
+  481  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  482  sed -e 's/[[:alnum:]]/d' datos_empleados.csv
+  483  sed -e 's/[[:alnum:]]/d/' datos_empleados.csv
+  484  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  485  sed -e 'd/[[:alnum:]]/' datos_empleados.csv
+  486  sed -e 'd/[[:alnum:]]' datos_empleados.csv
+  487  sed -e 'd/[[:alnum:]]s' datos_empleados.csv
+  488  sed -e 'd/[[:alnum:]]/s' datos_empleados.csv
+  489  sed -e 'd/[[:alnum:]]/' datos_empleados.csv
+  490  sed -e '/[[:alnum:]]/d' datos_empleados.csv
+  491  sed -e '/[[:alnum:]]/p' datos_empleados.csv
+  492  sed -e '/[[:alnum:]]/!d' datos_empleados.csv
+  493  sed -e 's/([[:alnum:]])\1+/\1/g' datos_empleados.csv 
+  494  sed -E 's/([[:alnum:]])\1+/\1/g' datos_empleados.csv 
+  495  cat datos_empleados.csv 
+  496  sed -E 's/([[:alnum:]])\1+/\1/g' datos_empleados.csv | grep Beach
+  497  echo "sed -E 's/([[:alnum:]])\1+/\1/g' datos_empleados.csv | grep Beach" >> exercises_sed.txt 
+  498  cat exercises_sed.txt 
+  499  echo "hola mundo" | sed 's/\(hola\) \(mundo\)/\2,\1/'
+  500  echo "echo "hola mundo" | sed 's/\(hola\) \(mundo\)/\2,\1/'
+mundo,hola
+  501  nano exercises_sed.txt 
+  502  clear
+  503  sed 1,5d datos_empleados.csv 
+  504  cat datos_empleados.csv 
+  505  nano exercises_sed.txt 
+  506  cat -n datos_empleados.csv 
+  507  sed -e '1,19d' -e '31,101d' datos_empleados.csv 
+  508  cat -n datos_empleados.csv | sed -e '1,19d' -e '31,101d' datos_empleados.csv 
+  509  cat -n datos_empleados.csv | sed -e '1,19d' -e '31,101d'
+  510  cat -n datos_empleados.csv | sed -e '1,19d' -e '31,$d'
+  511  nano exercises_sed.txt 
+  512  sed -e 's/[[:alnum:]]//' datos_empleados.csv 
+  513  sed -e 's/[[:alnum:]]/ /' datos_empleados.csv 
+  514  sed -e 's/[[:alnum:]]/ /' datos_empleados.csv | head -n3
+  515  head -n3 datos_empleados.csv 
+  516  sed -e 's/[[:alnum:]]/ /' datos_empleados.csv | head -n3
+  517  nano exercises_sed.txt 
+  518  sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv 
+  519  sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv  | head -n3
+  520  sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv  | head -n3 | tail -n3
+  521  sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv  | head -n3
+  522  sed -e '1i\DATOS' -e '$a\FIN DATOS' datos_empleados.csv  | tail -n3
+  523  nano exercises_sed.txt 
+  524  cat datos_empleados.csv | grep ;
+  525  cat datos_empleados.csv | grep \;
+  526  cat datos_empleados.csv | grep \,
+  527  sed -e 's/\,/\;/' datos_empleados.csv 
+  528  sed -E 's/\,/\;/' datos_empleados.csv 
+  529  sed -E 's/\,/\;/g' datos_empleados.csv 
+  530  sed -Ei 's/\,/\;/g' datos_empleados.csv 
+  531  cat datos_empleados.csv 
+  532  nano exercises_sed.txt 
+  533  sed -E 's/\;/\\t/g' datos_empleados.csv 
+  534  sed -E 's/\;/\t/g' datos_empleados.csv 
+  535  nano exercises_sed.txt 
+  536  history
