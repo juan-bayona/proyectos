@@ -1,0 +1,480 @@
+In this file I am showing the work done on previous clases of the course. Main commands used:
+more, less, grep,cut,sort,uniq,wc,find,rev,ln,du,df,tar -c to create and tar -x to extract. Created backups with tar with absolute path and restored them in the original folder.
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ history
+    1  pws
+    2  pwd
+    3  ls
+    4  cd/
+    5  cd
+    6  cd..
+    7  su elmakia
+    8  ls -l /home/
+    9  cd /home/elmakia/
+   10  ls
+   11  touch hola
+   12  touch hola.txt
+   13  su elmakia touch hola.txt
+   14  su touch hola.txt
+   15  su -
+   16  ls
+   17  ls Documentos/
+   18  su elmakia
+   19  su - elmakia
+   20  cd 
+   21  ls
+   22  pwd
+   23  echo "date" > hora.sh
+   24  ls -lp
+   25  ls -l
+   26  ./hora.sh
+   27  chmod u+x hora.sh 
+   28  ./hora.sh
+   29  ls -l
+   30  rm -r ficheros
+   31  pwd
+   32  ls -l
+   33  tar zxf ficheros.tar.gz 
+   34  ls -l
+   35  ls -l ficheros
+   36  ls -l ficheros/fotos/
+   37  cd ls -l ficheros/fotos/
+   38  cd ficheros/fotos/
+   39  ls
+   40  chmod +x escritorio-ubuntu.jpeg 
+   41  ls -l
+   42  chmod 0 logo-ubuntu.gif 
+   43  ls -l
+   44  chmod g+x personales/
+   45  ls -l
+   46  chmod g-x personales/
+   47  ls -l
+   48  chmod 777 shell-commands.gif 
+   49  ls -l
+   50  chmod 200 tux-clasico.jpeg 
+   51  ls -l
+   52  chmod 044 tux-moderno.png
+   53  ls -l
+   54  history
+   55  ls -l
+   56  ls -l /etc/apt/
+   57  ls -l sources.list.d
+   58  cd /etc/apt/
+   59  ls -l sources.list.d
+   60  su -
+   61  cat sources.list
+   62  apt get aptitude
+   63  apt aptitude
+   64  apt list aptitude
+   65  apt search aptitude
+   66  apt install aptitude
+   67  sudo apt install aptitude
+   68  su -
+   69  wget ?
+   70  wget --HELP
+   71  wget --help
+   72  }
+   73  cat /etc/passwd
+   74  cd ~
+   75  ls
+   76  cd /
+   77  ls
+   78  sudo elmakia
+   79  cd /home/
+   80  ls
+   81  cd elmakia/
+   82  su elmakia
+   83  tail /etc/passwd
+   84  tail /etc/passwd | grep ^a
+   85  exit
+   86  ls -l
+   87  cd /home/bayona/ficheros/
+   88  ls -lr
+   89  ls -lR
+   90  ls -l
+   91  cd documentos/
+   92  ls
+   93  cd ..
+   94  ls -lr musica/
+   95  ls -lr musica/2010/
+   96  ls
+   97  ls -lr musica/2009/nacional/sabina/
+   98  cd musica/2009/nacional/sabina/
+   99  ln 'peces de ciudad.mp3' 'pescaos.mp3'
+  100  ls -lr
+  101  ln 'peces de ciudad.mp3' 'pescaos2.mp3'
+  102  ls -lr
+  103  cat pescaos.mp3 
+  104  mv 'peces de ciudad.mp3' ..
+  105  ls -lr ..
+  106  ls -lr
+  107  cat pescaos.mp3 
+  108  rm ../peces\ de\ ciudad.mp3 
+  109  ls -lr
+  110  cart pescaos
+  111  cart pescaos.mp3 
+  112  car pescaos.mp3 
+  113  cat pescaos.mp3 
+  114  ls -lr
+  115  ln -s nos\ sobran\ los\ motivos.mp3 motivos.mp3
+  116  ls -lr
+  117  cat motivos.mp3 
+  118  cat nos\ sobran\ los\ motivos.mp3 
+  119  mv motivos.mp3 ..
+  120  ls -l
+  121  ls -lr ..
+  122  cat ../motivos.mp3 
+  123  mv ../motivos.mp3 .
+  124  ls
+  125  ls -l
+  126  cat motivos.mp3 
+  127  rm motivos.mp3 
+  128  ls
+  129  ls -l
+  130  ln -s /home/bayona/ficheros/musica/2009/nacional/sabina/ nos\ sobran\ los\ motivos.mp3 motivos\ fuertes.mp3
+  131  ln -s /home/bayona/ficheros/musica/2009/nacional/sabina/ nos\ sobran\ los\ motivos.mp3 'motivos fuertes.mp3'
+  132  ln -s /home/bayona/ficheros/musica/2009/nacional/sabina/ nos\ sobran\ los\ motivos.mp3 'motivos.mp3'
+  133  ln -s /home/bayona/ficheros/musica/2009/nacional/sabina/nos\ sobran\ los\ motivos.mp3 hola.mp3
+  134  ls -lr
+  135  cat hola.mp3 
+  136  mv hola.mp3 ..
+  137  ls -lr
+  138  ls -lr ..
+  139  cat hol
+  140  cat ../hola.mp3 
+  141  cd /home/bayona/ficheros/
+  142  du .
+  143  du -h
+  144  du -sh
+  145  du -sh *
+  146  du -sh 
+  147  du -sh ..
+  148  du -sh /*
+  149  du -sh /* 2> /dev/null 
+  150  du -sh /* 2> /dev/null | sort
+  151  du -sh /* 2> /dev/null | sort -h
+  152  du -sh /* 2> /dev/null | sort -r
+  153  du -sh /* 2> /dev/null | sort -rh
+  154  du -sh /usr 2> /dev/null | sort -rh
+  155  du h /usr 2> /dev/null | sort -rh
+  156  du -h /usr 2> /dev/null | sort -rh
+  157  du -h /usr 2> /dev/null | sort -rh | head
+  158  du -h /usr/* 2> /dev/null | sort -rh | head
+  159  du -sh
+  160  du -sh *
+  161  cd /
+  162  du -sh *
+  163  du -h /usr/* 2> /dev/null | sort -rh | head
+  164  df
+  165  df 
+  166  df -h
+  167  df -hT
+  168  df -hT /home/bayona/
+  169  df -hT /home/bayona/*
+  170  df -hT /home/bayona/
+  171  apt install dfc
+  172  su apt istall
+  173  sudo apt install dfc
+  174  sudo su apt install dfc
+  175  su - apt install dfc
+  176  su -
+  177  dfc
+  178  dfc /home/bayona/
+  179  locate sabina
+  180  locate -i sabina
+  181  locate --help
+  182  su -
+  183  locate -i sabina
+  184  su -
+  185  locate -i sabina
+  186  locate -r ^pescaos$
+  187  locate -r '^pescaos$'
+  188  locate -ri '^pescaos$'
+  189  locate -r '/pescaos$'
+  190  locate -r '/pescao'
+  191  locate -r '/pescao$'
+  192  locate  '/pescao$'
+  193  locate -r '/^pescao$'
+  194  locate -r -i '/^pescao$'
+  195  locate -r -i /pescao$
+  196  locate -r -i "/pescao$"
+  197  locate -r -i "/pescaos$"
+  198  locate -r -i "/pescaos.mp3$"
+  199  locate -r -i "/sabina"
+  200  locate -r -i "/sabina/p$"
+  201  locate -r -i "/sabina/p*.
+  202  locate -r -i "/sabina/p*."
+  203  locate -r -i "/sabina/^p*."
+  204  locate -r -i "/sabina/^p$"
+  205  locate -r -i "/sabina/^p"
+  206  locate -r -i "/sabina/p*.mp3$"
+  207  locate -r -i "/sabina/p.*mp3$"
+  208  locate -r -i "/s."
+  209  locate -r -i "/s.*.log$"
+  210  locate -r -i ".log$"
+  211  locate -r -i "/.log$"
+  212  locate -r -i "\.log$"
+  213  cat /run/initramfs/fsck.log
+  214  su -
+  215  locate -r -i "\.log$"
+  216  locate -r -i "\.log$" | du
+  217  locate -r -i "\.log$" | sort -h
+  218  find 
+  219  find -d sabina
+  220  find -type d sabina
+  221  find -type 
+  222  find -type d sabina
+  223  find -type d 
+  224  find -type d /sabina
+  225  find -type d /sabina/
+  226  find -iname sabina
+  227  find -iname sabina /home/bayona/
+  228  find -iname sabina /home/bayona/ficheros
+  229  find /home/bayona/ficheros/ iname "sabina"
+  230  find /home/bayona/ficheros/ -iname "sabina"
+  231  find /home/bayona/ficheros/ -iname musica
+  232  find /home/bayona/ficheros/ -type d
+  233  find /home/bayona/ficheros/ -type f
+  234  find /home/bayona/ficheros/ -type f | grep "."
+  235  find /home/bayona/ficheros/ -type f | grep ".mp3"
+  236  find /home/bayona/ficheros/ -type f | rev
+  237  find /home/bayona/ficheros/ -type f | rev | cut -d"." -f1
+  238  find /home/bayona/ficheros/ -type f | rev | cut -d"." -f1 | rev | sort
+  239  find /home/bayona/ficheros/ -type f | rev | cut -d"." -f1 | rev | sort | uniq -c
+  240  cd /
+  241  find -iname ".*log"
+  242  find -iname ".*log" 2> /dev/null 
+  243  find -iname ".*log" 2> /dev/null
+  244  find -iname ".*txt" 2> /dev/null
+  245  find -iname ".*txt"
+  246  find /home/bayona -iname ".*txt"
+  247  find /home/bayona -iname txt
+  248  find /home/bayona
+  249  find /home/bayona/ficheros/ txt
+  250  find /home/bayona/ficheros/ -iname ".txt"
+  251  find /home/bayona/ficheros/ -iname "txt"
+  252  find /home/bayona/ficheros/ -iname txt
+  253  cd /home/bayona/ficheros/
+  254  find . iname "*jpg"
+  255  find . iname "*pg"
+  256  find . iname "*.jpg"
+  257  find . iname "*.mp3"
+  258  find . -iname "*.mp3"
+  259  find +200kb 
+  260  find +200KB 
+  261  find +200
+  262  find +200k
+  263  find . +200k
+  264  find . +2000k
+  265  find . +200k
+  266  find . +2000k
+  267  find . +2000m
+  268  find . +2000M
+  269  find . -size 2000k
+  270  find . -size 200k
+  271  find . -size +200k
+  272  find . -size +200M
+  273  find . -size +200M -iname "*.jpg"
+  274  find . -size -200M -iname "*.jpg"
+  275  find . -size +200k -iname "*.jpg"
+  276  ls -lr
+  277  ls -lR
+  278  find . -perm -111
+  279  find . -perm -111 -type f
+  280  find . -perm -444 -type f
+  281  find . -perm -444 -type f | ls -l
+  282  ls -l ./documentos/informes/informe-2009.txt 
+  283  chmod o-r ./documentos/informes/informe-2009.txt
+  284  ls -l ./documentos/informes/informe-2009.txt 
+  285  find . -perm -444 -type f | ls -l
+  286  ls -l ./documentos/informes/informe-2009.txt 
+  287  find . -perm -444 -type f
+  288  find . -perm /444 -type f
+  289  find . -perm -222 -type f
+  290  find . -perm -222
+  291  cd ./documentos/
+  292  ls
+  293  ls -l
+  294  find . -perm -421 -type f
+  295  find . -perm -421
+  296  find . -perm /421
+  297  find . -perm /421 -type f
+  298  cd ..
+  299  find -user bayona
+  300  find -user elmakia
+  301  su elmakia
+  302  find -user elmakia
+  303  /home/elmakia/
+  304  cd /home/elmakia/
+  305  cd Documentos/
+  306  ls -l
+  307  su elmakia
+  308  cd /home/bayona/ficheros/
+  309  cd /
+  310  find / -user bayona
+  311  find / -user elmakia
+  312  find / -user elmakia 2> /dev/null 
+  313  find / -group bayona 2> /dev/null 
+  314  find / -group bayona -type f 2> /dev/null 
+  315  find /home/ -group bayona -type f 2> /dev/null 
+  316  find /home/ -group Estudiantes -type f 2> /dev/null 
+  317  find /home/ -user elmakia -type f 2> /dev/null 
+  318  su asesor1 
+  319  exit
+  320  su asesor1 
+  321  id
+  322  exit
+  323  id
+  324  cat /etc/shadow
+  325  sudo cat /etc/shadow
+  326  visudo
+  327  sudo visudo
+  328  id
+  329  newgrp users 
+  330  exit
+  331  cat /etc/shadow
+  332  sudo cat /etc/shadow
+  333  id
+  334  newgrp sudo
+  335  exit
+  336  clear
+  337  find -iname "*temp*" -type d
+  338  sudo find -iname "*temp*" -type d
+  339  sudo find -iname "*temp*" -type d ls
+  340  sudo find ls -iname "*temp*" -type d 
+  341  ls find -iname "*temp*" -type d 
+  342  su -
+  343  cd ..
+  344  ls
+  345  mkdir ejercicios
+  346  sudo mkdir ejercicios
+  347  ls -ld
+  348  ls
+  349  ls -l
+  350  rm ejercicios/
+  351  rm -r ejercicios/
+  352  sudo rm -r ejercicios/
+  353  ls
+  354  cd bayona/
+  355  ls
+  356  ls -ld
+  357  cd ..
+  358  sudo mkdir ejercicios
+  359  ls -l
+  360  chmod o+w ejercicios/
+  361  sudo chmod o+w ejercicios/
+  362  ls
+  363  ls -l
+  364  sudo useradd -s /bin/bash PROFESOR
+  365  sudo usermod -m PROFESOR 
+  366  sudo usermod -d PROFESOR 
+  367  sudo usermod -d /home/profesor PROFESOR 
+  368  sudo passwd PROFESOR 
+  369  sudo rm -r ejercicios/
+  370  su PROFESOR 
+  371  sudo useradd -s /bin/bash PROFESOR
+  372  id asesor1 
+  373  su asesor1 
+  374  su asesor1
+  375  su -
+  376  su asesor1 
+  377  visudo
+  378  sudo visudo
+  379  su -
+  380  fdisk -l
+  381  su elmakia 
+  382  clear
+  383  ls -ld /sbin/fdisk 
+  384  chmod u-x /sbin/fdisk 
+  385  sudo chmod u-x /sbin/fdisk 
+  386  ls -ld /sbin/fdisk 
+  387  sudo fdisk -l
+  388  su elmakia 
+  389  id
+  390  cat /etc/sh
+  391  cat /etc/shadow
+  392  sudo cat /etc/shadow
+  393  su -
+  394  sudo cat /etc/shadow
+  395  id
+  396  cleart
+  397  clear
+  398  cd 
+  399  cd ~
+  400  ls
+  401  ls -ld
+  402  fdisk -l
+  403  su -
+  404  sudo fsdisk -l
+  405  sudo fdisk -l
+  406  sudo /etc/shadow
+  407  su -
+  408  tail /etc/shadow
+  409  sudo /etc/shadow
+  410  sudo tail /etc/shadow
+  411  fdisk -l
+  412  ls -ld /sbin/fdisk
+  413  sudo chmod u+s /sbin/fdisk 
+  414  ls -ld /sbin/fdisk
+  415  ls --help
+  416  clear
+  417  ls -ld /sbin/fdisk
+  418  fdisk -l
+  419  su asesor1 
+  420  su elmakia 
+  421  sudo usermod -s elmakia
+  422  sudo usermod -s /bin/bash elmakia 
+  423  su elmakia 
+  424  clear
+  425  cd 
+  426  pws
+  427  pwd
+  428  sudo cat /etc/shadow
+  429  visudo
+  430  alias hola "sudo cat/etc"
+  431  alias cat /etc hola
+  432  alias --help
+  433  alias hola="ls"
+  434  hola
+  435  unalias hola
+  436  su
+  437  who
+  438  w
+  439  last
+  440  sudo
+  441  su -
+  442  id
+  443  visudo
+  444  su -
+  445  cd /home/
+  446  ls
+  447  ls -l
+  448  su INGENIEROS 
+  449  sudo passwd INGENIEROS 
+  450  su INGENIEROS 
+  451  exit
+  452  ls
+  453  cd ~
+  454  ls
+  455  cd proyectos/
+  456  ls -l
+  457  cd Linux/UserCreationAndPermissions/
+  458  ls
+  459  nano exercises.txt
+  460  nano exercises.txt 
+  461  > test
+  462  ls -l
+  463  chmod u+x test 
+  464  ls -l
+  465  chmod x test 
+  466  chmod +x test 
+  467  ls -l
+  468  chmod u-x, g+w,o+r test 
+  469  chmod u-x, g+w, o+r test 
+  470  chmod u-x,g+w, o+r test 
+  471  chmod u-x,g+w test 
+  472  ls -l
+  473  sudo chown elmakia test 
+  474  ls -l
+  475  sudo chown :asesores test 
+  476  ls -l

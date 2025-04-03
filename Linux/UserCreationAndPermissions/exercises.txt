@@ -1,0 +1,73 @@
+****Did practice remembering user creation. Added home directoy, especified main and secondary group, also the bash used.
+useradd -m -g Estudiantes -G asesores -s /bin/bash GitHub
+
+****Verified using id and added password:
+****Practiced mkdir,rm,ls,cd,cp,mv,echo and many basic commands.
+****Practiced usermod and userdel
+
+root@debian:~# id GitHub 
+uid=1007(GitHub) gid=1002(Estudiantes) grupos=1004(asesores),1002(Estudiantes)
+root@debian:~# passwd GitHub 
+
+****Created file called test 
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ > test
+
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona bayona 448 abr  3 10:32 exercises.txt
+-rw-r--r-- 1 bayona bayona   0 abr  3 10:33 test
+
+****Added execute permission to the user portion:
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ chmod u+x test 
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona bayona 448 abr  3 10:32 exercises.txt
+-rwxr--r-- 1 bayona bayona   0 abr  3 10:33 test
+
+****Added X to all the portions, i.e user, group and others.
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ chmod +x test 
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona bayona 448 abr  3 10:32 exercises.txt
+-rwxr-xr-x 1 bayona bayona   0 abr  3 10:33 test
+
+****Tested modifying permissions to two portions in a row:
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ chmod u-x,g+w test 
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona bayona 448 abr  3 10:32 exercises.txt
+-rw-rwxr-x 1 bayona bayona   0 abr  3 10:33 test
+
+*****Practiced changing owner to "elmakia":
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ sudo chown elmakia test 
+[sudo] contraseña para bayona: 
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona  bayona 448 abr  3 10:32 exercises.txt
+-rw-rwxr-x 1 elmakia bayona   0 abr  3 10:33 test
+
+****Practiced changing the group only on the test file:
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ sudo chown :asesores test 
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rw-r--r-- 1 bayona  bayona   448 abr  3 10:32 exercises.txt
+-rw-rwxr-x 1 elmakia asesores   0 abr  3 10:33 test
+
+****Practicing permissions using numbers 
+111 100 101
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ sudo chmod 745 test 
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ ls -l
+total 4
+-rwxr--r-x 1 bayona  bayona   2367 abr  3 10:52 exercises.txt
+-rwxr--r-x 1 elmakia asesores    0 abr  3 10:33 test
+
+
+
+
+
+

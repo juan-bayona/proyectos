@@ -1,0 +1,50 @@
+*Making user "elmakia" to run admin commands on multiple ways.
+
+1-Adding to sudo group as the main one.
+
+bayona@debian:~/proyectos/Linux/UserCreationAndPermissions$ sudo id elmakia
+uid=1001(elmakia) gid=1002(Estudiantes) grupos=1002(Estudiantes)
+
+*Tried accessing a root command and getting permission error:
+
+elmakia@debian:/home/bayona/proyectos/Linux/UserCreationAndPermissions$ tail /etc/shadow
+tail: no se puede abrir '/etc/shadow' para lectura: Permiso denegado
+
+
+root@debian:~# usermod -g sudo elmakia 
+root@debian:~# id elmakia 
+uid=1001(elmakia) gid=27(sudo) grupos=27(sudo)
+root@debian:~# 
+
+*I can access now using sudo
+elmakia@debian:~$ sudo tail /etc/shadow
+[sudo] contraseña para elmakia: 
+saned:!:20134::::::
+lightdm:!:20134::::::
+
+2-Added user with all privileges:
+ User privilege specification
+elmakia ALL=(ALL:ALL) ALL
+
+elmakia@debian:/home/bayona/proyectos/Linux/UserCreationAndPermissions$ sudo tail /etc/shadow
+saned:!:20134::::::
+lightdm:!:20134::::::
+polkitd:!*:20134::::::
+rtkit:!:20134::::::
+colord:!:20134::::::
+bayona:$y$j9T$gMiJ
+
+
+3-Added to an alias:
+# User alias specification
+User_Alias ADMINISTRADORES=bayona,elmakia
+# Cmnd alias specification
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+ADMINISTRADORES ALL=(ALL:ALL) ALL
+
+
+
+
+
