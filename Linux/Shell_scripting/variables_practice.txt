@@ -1,0 +1,37 @@
+***Created a script assigning some parameters and then displaying them:
+
+bayona@debian:~$ cat p1.sh 
+#!/bin/bash
+echo the first parameter is $1
+echo the number of parameters are $#
+echo All the paramaters are: $*
+
+bayona@debian:~$ ./p1.sh Hello Beautiful World
+the first parameter is Hello
+the number of parameters are 3
+All the paramaters are: Hello Beautiful World
+bayona@debian:~$ 
+
+
+
+**Here we created a small script using variables and calling them:
+
+bayona@debian:~$ ./p3.sh parameter1
+the script ./p3.sh
+Is executed by bayona
+The PID is 2394
+We use the parameter1 
+To say.... Hello World
+
+
+**See here the structure:
+
+bayona@debian:~$ cat p3.sh 
+#!/bin/bash
+The script $0 
+echo is executed by $USER
+The PID is $$
+echo We use the $1
+message='Hello World'
+echo To say.... ${message}
+
