@@ -1,0 +1,13 @@
+bayona@debian:~$ cat read.sh 
+#!/bin/bash
+
+read -p "Please enter your name: " Name MiddleName LastName
+echo Your name is ${Name} ${MiddleName} ${LastName}
+
+bayona@debian:~$ ./read.sh 
+Please enter your name: Juan Bayona Ruiz
+Your name is Juan Bayona Ruiz
+bayona@debian:~$ 
+
+#learnt here how to use the variables to ask for information to the user and then
+#print in the screen the returned value insithe variable.

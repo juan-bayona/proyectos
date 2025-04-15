@@ -1,0 +1,22 @@
+#!/bin/bash
+read -p "ingrese el primer número: " v1
+read -p "ingrese el segundo número: " v2
+
+
+if [ $v1 -gt $v2 ]; then
+        echo $v1 "es  mas grande que" $v2
+else
+        echo $v2 "es mas grande que" $v1
+fi
+
+#Testing the script:
+
+bayona@debian:~$ bash test.sh 
+ingrese el primer número: 5
+ingrese el segundo número: 20
+20 es mas grande que 5
+bayona@debian:~$ bash test.sh 
+ingrese el primer número: 20
+ingrese el segundo número: 5
+20 es  mas grande que 5
+

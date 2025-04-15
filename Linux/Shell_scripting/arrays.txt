@@ -1,0 +1,28 @@
+bayona@debian:~$ cat arrays.sh 
+#!/bin/bash
+
+mia=(dato1 dato2 dato3)
+echo ${mia[0]}
+echo ${mia[1]}
+echo ${mia[2]}
+echo ${mia[-1]}
+echo ${mia[*]}
+echo the number of elements are ${#mia[*]}
+echo the available indexes are ${!mia[*]}
+unset mia[1]
+echo AFTER DELETION
+echo the remaining elements are ${mia[@]}
+echo the number of elements are ${#mia[*]}
+echo the available indexes are ${!mia[*]}
+bayona@debian:~$ ./arrays.sh 
+dato1
+dato2
+dato3
+dato3
+dato1 dato2 dato3
+the number of elements are 3
+the available indexes are 0 1 2
+AFTER DELETION
+the remaining elements are dato1 dato3
+the number of elements are 2
+the available indexes are 0 2

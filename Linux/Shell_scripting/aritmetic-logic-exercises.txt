@@ -1,0 +1,10 @@
+#created program to perform different aritmetic operations.
+
+#!/bin/bash
+read -p "introduzca el primer número:" n1
+read -p "introduzca el segundo número:" n2
+echo  "la suma es: $((n1+n2))"
+echo  "la resta es: $((n1-n2))"
+echo  "la multiplicacion es: $((n1*n2))"
+echo  "la division es: $((n1/n2))"
+echo  "El modulo es: $((n1%n2))"

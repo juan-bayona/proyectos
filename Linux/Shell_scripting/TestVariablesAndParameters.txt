@@ -1,0 +1,9 @@
+#!/bin/bash
+#read -p "Please enter the desired parameters " p1 p2 p3 p4 p5
+echo the number of parameters are $#
+echo the value of the first three are $1 $2 $3
+
+#Exercise 2
+
+echo You are the user $USER and you are using the shell $SHELL
+
